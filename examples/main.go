@@ -14,6 +14,7 @@ import (
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 	"github.com/markbates/goth/providers/azuread"
+	"github.com/markbates/goth/providers/azureadv2"
 )
 
 func main() {
