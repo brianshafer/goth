@@ -20,58 +20,11 @@ $ go get github.com/markbates/goth
 * Apple
 * Auth0
 * Azure AD
-* Battle.net
-* Bitbucket
-* Box
-* Cloud Foundry
-* Dailymotion
-* Deezer
-* DigitalOcean
-* Discord
-* Dropbox
-* Eve Online
-* Facebook
-* Fitbit
-* Gitea
-* GitHub
-* Gitlab
-* Google
-* Google+ (deprecated)
-* Heroku
-* InfluxCloud
-* Instagram
-* Intercom
-* Kakao
-* Lastfm
-* Linkedin
-* LINE
-* Mailru
-* Meetup
 * MicrosoftOnline
-* Naver
-* Nextcloud
 * OneDrive
 * OpenID Connect (auto discovery)
-* Paypal
-* SalesForce
-* Shopify
 * Slack
-* Soundcloud
-* Spotify
-* Steam
-* Strava
-* Stripe
-* Tumblr
-* Twitch
-* Twitter
-* Typetalk
-* Uber
-* VK
-* Wepay
-* Xero
-* Yahoo
 * Yammer
-* Yandex
 
 ## Examples
 
