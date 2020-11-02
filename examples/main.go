@@ -13,24 +13,11 @@ import (
 	"github.com/gorilla/pat"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
-	"github.com/markbates/goth/providers/apple"
-	"github.com/markbates/goth/providers/auth0"
 	"github.com/markbates/goth/providers/azuread"
-	"github.com/markbates/goth/providers/okta"
-	"github.com/markbates/goth/providers/openidConnect"
 )
 
 func main() {
 	goth.UseProviders(
-		twitter.New(os.Getenv("TWITTER_KEY"), os.Getenv("TWITTER_SECRET"), "http://localhost:3000/auth/twitter/callback"),
-		// If you'd like to use authenticate instead of authorize in Twitter provider, use this instead.
-		// twitter.NewAuthenticate(os.Getenv("TWITTER_KEY"), os.Getenv("TWITTER_SECRET"), "http://localhost:3000/auth/twitter/callback"),
-
-		google.New(os.Getenv("GOOGLE_KEY"), os.Getenv("GOOGLE_SECRET"), "http://localhost:3000/auth/google/callback"),
-		github.New(os.Getenv("GITHUB_KEY"), os.Getenv("GITHUB_SECRET"), "http://localhost:3000/auth/github/callback"),
-		linkedin.New(os.Getenv("LINKEDIN_KEY"), os.Getenv("LINKEDIN_SECRET"), "http://localhost:3000/auth/linkedin/callback"),
-		amazon.New(os.Getenv("AMAZON_KEY"), os.Getenv("AMAZON_SECRET"), "http://localhost:3000/auth/amazon/callback"),
-		yammer.New(os.Getenv("YAMMER_KEY"), os.Getenv("YAMMER_SECRET"), "http://localhost:3000/auth/yammer/callback"),
 		onedrive.New(os.Getenv("ONEDRIVE_KEY"), os.Getenv("ONEDRIVE_SECRET"), "http://localhost:3000/auth/onedrive/callback"),
 		azuread.New(os.Getenv("AZUREAD_KEY"), os.Getenv("AZUREAD_SECRET"), "http://localhost:3000/auth/azuread/callback", nil),
 		microsoftonline.New(os.Getenv("MICROSOFTONLINE_KEY"), os.Getenv("MICROSOFTONLINE_SECRET"), "http://localhost:3000/auth/microsoftonline/callback"),
@@ -40,15 +27,9 @@ func main() {
 	}
 
 	m := make(map[string]string)
-	m["github"] = "Github"
-	m["gitlab"] = "Gitlab"
-	m["google"] = "Google"
-	m["linkedin"] = "Linkedin"
 	m["onedrive"] = "Onedrive"
 	m["azuread"] = "Azure AD"
 	m["microsoftonline"] = "Microsoft Online"
-	m["slack"] = "Slack"
-	m["openid-connect"] = "OpenID Connect"
 
 	var keys []string
 	for k := range m {
