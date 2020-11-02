@@ -16,15 +16,11 @@ $ go get github.com/markbates/goth
 
 ## Supported Providers
 
-* Amazon
-* Apple
-* Auth0
 * Azure AD
 * MicrosoftOnline
 * OneDrive
-* OpenID Connect (auto discovery)
-* Slack
-* Yammer
+
+I modified this to remove everything except options from MSFT
 
 ## Examples
 
